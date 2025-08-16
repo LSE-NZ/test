@@ -1,6 +1,5 @@
 // index.js
 const express = require("express");
-const fetch = require("node-fetch");
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
@@ -31,7 +30,7 @@ app.post("/search", async (req, res) => {
 
   try {
     // Replace this with your Railway Python backend URL
-    const pythonServiceURL = `https://sincere-insight-production.up.railway.app/search`;
+    const pythonServiceURL = `https://your-python-service.up.railway.app/search`;
 
     const response = await fetch(pythonServiceURL, {
       method: "POST",
